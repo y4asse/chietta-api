@@ -5,8 +5,13 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
+  @Get('ok')
   ok(): string {
     return 'ok';
   }
+
+  // @Get('prisma')
+  // getFromPrisma(): string {
+  //   return this.appService.getFromPrisma();
+  // }
 }
